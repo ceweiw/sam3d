@@ -276,9 +276,8 @@ def get_pcd(save_path,scene_name, color_name, rgb_path, mask_generator, save_2dm
     points[:,2] = uv_depth[:,2]
     points_world = np.dot(points, np.transpose(pose))   # Shape: (N, 4)
 
-    points_world = points_world[:, :3].T  #(3,N)
-    colors=colors.T #shape(3,N)
-
+    # points_world = points_world[:, :3].T  #(3,N)
+    # colors=colors.T #shape(3,N)
     # # densified_points, densified_colors, densified_group_ids = densificate_pc(save_path,points_world, colors, group_ids, max_distance=200.0)
     # densified_points, densified_colors, densified_group_ids = make_ground_same(save_path,points_world, colors, group_ids, max_distance=200.0)
     # densified_group_ids = num_to_natural(densified_group_ids)  #shape (N,)
@@ -508,33 +507,33 @@ def seg_pcd(scene_name, rgb_path, data_path, save_path, mask_generator, voxel_si
 
     # save_pcd_list(pcd_list, save_path, scene_name)  ########保存中间帧结果为pth文件
 
-    # result = pcd_list[0]  # 将第一帧作为初始合并结果
-    # for i in range(1, len(pcd_list)):
-    #     print(f"Merging frame {i} into current result...", flush=True)
-    #     # 将当前结果与下一帧组成一个列表，然后传入 cal_2_scenes 进行合并
-    #     merged_frame = cal_2_scenes([result, pcd_list[i]], (0, 1), voxel_size=voxel_size, voxelize=voxelize)
-    #     if merged_frame is not None:
-    #         result = merged_frame
-    #     else:
-    #         print(f"Merge failed for frame {i}", flush=True)
-    # seg_dict = result
+    result = pcd_list[0]  # 将第一帧作为初始合并结果
+    for i in range(1, len(pcd_list)):
+        print(f"Merging frame {i} into current result...", flush=True)
+        # 将当前结果与下一帧组成一个列表，然后传入 cal_2_scenes 进行合并
+        merged_frame = cal_2_scenes([result, pcd_list[i]], (0, 1), voxel_size=voxel_size, voxelize=voxelize)
+        if merged_frame is not None:
+            result = merged_frame
+        else:
+            print(f"Merge failed for frame {i}", flush=True)
+    seg_dict = result
+    #这三句是用来聚类的 并把聚类结果进行合并作为最后的结果
     # clustered_data_dict = cluster_point_cloud(result, eps=0.7, min_points=10)
-
     # final_res = cal_2_scenes([result, clustered_data_dict], (0, 1), voxel_size=voxel_size, voxelize=voxelize)
     # seg_dict = final_res
-    # seg_dict["group"] = num_to_natural(remove_small_group(seg_dict["group"], th))
-
-    #合并的过程
-    while len(pcd_list) != 1:
-        print("len(pcd_list)：",len(pcd_list), flush=True)
-        new_pcd_list = []
-        for indice in pairwise_indices(len(pcd_list)):  #自定义函数 一一次拿出两帧数据
-            pcd_frame = cal_2_scenes(pcd_list, indice, voxel_size=voxel_size, voxelize=voxelize) #这里是BM过程
-            if pcd_frame is not None:
-                new_pcd_list.append(pcd_frame)
-        pcd_list = new_pcd_list
-    seg_dict = pcd_list[0] #这里是合并后的结果
     seg_dict["group"] = num_to_natural(remove_small_group(seg_dict["group"], th))
+
+    # #合并的过程
+    # while len(pcd_list) != 1:
+    #     print("len(pcd_list)：",len(pcd_list), flush=True)
+    #     new_pcd_list = []
+    #     for indice in pairwise_indices(len(pcd_list)):  #自定义函数 一一次拿出两帧数据
+    #         pcd_frame = cal_2_scenes(pcd_list, indice, voxel_size=voxel_size, voxelize=voxelize) #这里是BM过程
+    #         if pcd_frame is not None:
+    #             new_pcd_list.append(pcd_frame)
+    #     pcd_list = new_pcd_list
+    # seg_dict = pcd_list[0] #这里是合并后的结果
+    # seg_dict["group"] = num_to_natural(remove_small_group(seg_dict["group"], th))
 
     densified_points, densified_colors, densified_group_ids = make_ground_same(save_path,seg_dict["coord"].T, seg_dict["color"].T, seg_dict["group"], max_distance=200.0)
     densified_group_ids = num_to_natural(densified_group_ids)  #shape (N,)
