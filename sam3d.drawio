@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="26.0.6">
+  <diagram name="第 1 页" id="JpGko-9SbhUysqxyV4yx">
+    <mxGraphModel dx="780" dy="458" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xcD9lzwnILZLRyMxWDQG-2" target="xcD9lzwnILZLRyMxWDQG-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-2" value="&lt;h1 style=&quot;box-sizing: border-box; outline: 0px; margin: 0px; padding: 0px; overflow-wrap: break-word; color: rgb(34, 34, 38); word-break: break-all; font-variant-ligatures: common-ligatures; text-align: start; background-color: rgb(255, 255, 255);&quot; id=&quot;articleContentId&quot; class=&quot;title-article&quot;&gt;&lt;font face=&quot;Helvetica&quot; style=&quot;font-size: 14px; font-weight: normal;&quot;&gt;NuSences&lt;/font&gt;&lt;/h1&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="250" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xcD9lzwnILZLRyMxWDQG-3" target="xcD9lzwnILZLRyMxWDQG-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-3" value="&lt;h1 style=&quot;box-sizing: border-box; outline: 0px; margin: 0px; padding: 0px; overflow-wrap: break-word; word-break: break-all; text-align: start; background-color: rgb(255, 255, 255); color: rgb(34, 34, 38);&quot; id=&quot;articleContentId&quot; class=&quot;title-article&quot;&gt;&lt;font style=&quot;font-weight: normal;&quot; face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(34, 34, 38), rgb(207, 207, 211)); font-variant-ligatures: common-ligatures; font-size: 14px;&quot;&gt;场景的depth、color、pose&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;&lt;h1 style=&quot;box-sizing: border-box; outline: 0px; margin: 0px; padding: 0px; overflow-wrap: break-word; word-break: break-all; text-align: start; background-color: rgb(255, 255, 255); color: rgb(34, 34, 38);&quot; id=&quot;articleContentId&quot; class=&quot;title-article&quot;&gt;&lt;font style=&quot;font-weight: normal;&quot; face=&quot;Helvetica&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(34, 34, 38), rgb(207, 207, 211)); font-variant-ligatures: common-ligatures; font-size: 14px;&quot;&gt;数据以及&lt;/span&gt;&lt;span style=&quot;background-color: transparent; text-align: center; font-size: 14px; font-variant-ligatures: common-ligatures;&quot;&gt;&lt;font color=&quot;#222226&quot;&gt;intrinsics文件&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="450" y="180" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-6" value="&lt;h1 style=&quot;box-sizing: border-box; outline: 0px; margin: 0px; padding: 0px; overflow-wrap: break-word; word-break: break-all; background-color: rgb(255, 255, 255); color: rgb(34, 34, 38);&quot; id=&quot;articleContentId&quot; class=&quot;title-article&quot;&gt;&lt;span style=&quot;font-size: 14px; font-variant-ligatures: common-ligatures; font-weight: 400;&quot;&gt;需要做的就是将点云投射到&lt;/span&gt;&lt;span style=&quot;font-size: 14px; font-variant-ligatures: common-ligatures; font-weight: 400; background-color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); color: light-dark(rgb(34, 34, 38), rgb(207, 207, 211));&quot;&gt;图像上，但是目前来说过于稀疏了，导致效果很不好&lt;/span&gt;&lt;/h1&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="440" y="320" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xcD9lzwnILZLRyMxWDQG-8" target="xcD9lzwnILZLRyMxWDQG-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-8" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;一帧点云&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="170" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xcD9lzwnILZLRyMxWDQG-9" target="xcD9lzwnILZLRyMxWDQG-15" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-9" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;sam2d进行分割获得分割掩码&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="370" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xcD9lzwnILZLRyMxWDQG-15" target="xcD9lzwnILZLRyMxWDQG-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-15" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;将结果投射到3d空间中&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xcD9lzwnILZLRyMxWDQG-17" target="xcD9lzwnILZLRyMxWDQG-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-17" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;进行帧间匹配&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;这&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;里可能工作量较大&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="570" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="xcD9lzwnILZLRyMxWDQG-19" target="xcD9lzwnILZLRyMxWDQG-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-19" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;匹配之后 使用前面的帧先稠密化&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="400" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-21" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;稠密化之后&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;再做BM 可能这里BM就只能和前面的一帧做一次BM&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="170" y="640" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xcD9lzwnILZLRyMxWDQG-25" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;第一点：深度的获取有没有精准的说法 怎么才能算更精准&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;第二点：点云投到图像非常稀疏 会影响匹配的精度 或者说根本找不到匹配点&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;第三点：这里只进行一次BM的话&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;而且很稀疏的话&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;可能效果并不是很好&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;第四点：什么时候进行稠密化&amp;nbsp; &amp;nbsp;BM之前还是之后（在BM之前进行稠密化会影响BM吧）&amp;nbsp; 但是不管怎么说 利用前面的帧进行稠密化的做法 首先要确保能够配准&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;另外，其实做室外场景的一整个场景的分割也说得过去，虽然应用好像不太好提 但是室内的也一样没用&amp;nbsp; &amp;nbsp; 不过要注意的是，如果还是要像原论文的算法 那么这个场景是不是要闭环&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="100" y="730" width="640" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
